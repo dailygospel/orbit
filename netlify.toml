@@ -1,4 +1,6 @@
 [build]
+  # Static site: Netlify can deploy these files directly.
+  command = ""
   publish = "."
 
 [[headers]]

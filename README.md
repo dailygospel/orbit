@@ -9,6 +9,8 @@ A responsive, static landing page for Orbit. No dependencies or build step. Incl
 3. Leave the build command empty. The publish directory is `.` (configured in `netlify.toml`).
 4. Deploy.
 
+Netlify reads the deployment settings from the root `netlify.toml` file when you connect this repository.
+
 You can also drag this folder into Netlify's manual deploy area.
 
 ## Connect checkout
