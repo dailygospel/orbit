@@ -1,0 +1,38 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1200"
+  height="630"
+  viewBox="0 0 1200 630"
+>
+  <rect width="1200" height="630" fill="#0b0e0c" />
+  <g fill="none" stroke="#c6f785" stroke-opacity=".16">
+    <circle cx="980" cy="315" r="270" />
+    <circle cx="980" cy="315" r="190" />
+    <circle cx="980" cy="315" r="100" />
+    <ellipse
+      cx="980"
+      cy="315"
+      rx="360"
+      ry="120"
+      transform="rotate(-35 980 315)"
+    />
+  </g>
+  <circle cx="1150" cy="161" r="13" fill="#c6f785" />
+  <g fill="#f1f2e9" font-family="Arial,Helvetica,sans-serif">
+    <text x="80" y="105" font-size="45" font-weight="bold">
+      orbit
+      <tspan fill="#c6f785">.</tspan>
+    </text>
+    <text x="80" y="280" font-size="100" letter-spacing="-4">See the</text>
+    <text x="80" y="390" font-size="100" letter-spacing="-4">
+      bigger
+      <tspan font-family="Georgia,serif" font-style="italic" fill="#c6f785">
+        picture.
+      </tspan>
+    </text>
+    <text x="85" y="493" fill="#a9b1a5" font-size="24">
+      A new perspective on Among Us.
+    </text>
+  </g>
+  <path d="M80 552h1040" stroke="#283029" />
+</svg>

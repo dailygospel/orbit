@@ -1,0 +1,865 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0d0c" />
+    <meta
+      name="description"
+      content="Meet Orbit: a new perspective on Among Us. Explore role reveals, in-game role tags, adjustable tracers, and player radar in one simple interface."
+    />
+    <meta property="og:title" content="Orbit — See the bigger picture." />
+    <meta
+      property="og:description"
+      content="Every role. Every player. A whole new perspective on Among Us."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/assets/social-card.svg" />
+    <title>Orbit — See the bigger picture.</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="config.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header wrap">
+      <a class="brand" href="#" aria-label="Orbit home"
+        ><svg viewBox="0 0 44 44" aria-hidden="true">
+          <circle cx="22" cy="22" r="9" />
+          <ellipse
+            cx="22"
+            cy="22"
+            rx="22"
+            ry="9"
+            transform="rotate(-35 22 22)"
+          />
+          <circle class="satellite" cx="38" cy="10" r="3.5" /></svg
+        ><span>orbit<span class="brand-dot">.</span></span></a
+      >
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#features">Features</a><a href="#how-it-works">How it works</a
+        ><a href="#access">Pricing</a><a href="#faq">FAQ</a>
+      </nav>
+      <a
+        class="button button-small header-cta"
+        href="#access"
+        data-checkout-link
+        >Buy access <span aria-hidden="true">↗</span></a
+      >
+    </header>
+
+    <main id="main">
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="status-dot"></span> A NEW PERSPECTIVE ON AMONG US
+          </p>
+          <h1 id="hero-title">
+            See the<br />bigger <span class="serif-word">picture.</span
+            ><span class="title-star" aria-hidden="true">✳</span>
+          </h1>
+          <p class="hero-description">
+            Every role. Every player. All in view.<br />Meet Orbit, your new
+            companion for a whole<br class="desktop-break" />
+            different way to experience Among Us.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#access" data-checkout-link
+              >Buy access
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M5 15 15 5M5 5h10v10" /></svg></a
+            ><a class="text-link" href="#demo"
+              >Explore the features <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div class="hero-note">
+            <span class="mini-orbit" aria-hidden="true">◎</span> Open Orbit.
+            Open Among Us. Connect.
+          </div>
+        </div>
+
+        <div class="hero-visual" id="demo">
+          <div class="orbit-arc arc-one" aria-hidden="true"></div>
+          <div class="orbit-arc arc-two" aria-hidden="true"></div>
+          <div class="floating-coordinate" aria-hidden="true">
+            YOUR LOBBY. IN FOCUS.
+          </div>
+          <div class="app-window">
+            <div class="window-bar">
+              <div class="window-brand">
+                <span class="mini-orbit">◎</span> orbit <span>/ overview</span>
+              </div>
+              <div class="preview-label">
+                <span class="status-dot"></span> INTERACTIVE PREVIEW
+              </div>
+            </div>
+            <div class="map-wrap">
+              <div class="map-heading">
+                <span class="map-overline">LOBBY OVERVIEW</span
+                ><span>The whole crew. One view.</span>
+              </div>
+              <svg
+                id="lobby-map"
+                class="lobby-map"
+                viewBox="0 0 620 410"
+                role="img"
+                aria-label="Illustrative game map with players, role tags, and tracer lines. Change the controls below to explore."
+              >
+                <defs>
+                  <pattern
+                    id="grid"
+                    width="24"
+                    height="24"
+                    patternUnits="userSpaceOnUse"
+                  >
+                    <path
+                      d="M24 0H0V24"
+                      fill="none"
+                      stroke="#252b29"
+                      stroke-width=".6"
+                    />
+                  </pattern>
+                  <pattern
+                    id="floor"
+                    width="10"
+                    height="10"
+                    patternUnits="userSpaceOnUse"
+                  >
+                    <path d="m0 10 10-10" stroke="#2a3430" stroke-width=".5" />
+                  </pattern>
+                  <radialGradient id="map-light">
+                    <stop stop-color="#263b2a" stop-opacity=".4" />
+                    <stop offset="1" stop-color="#101613" stop-opacity="0" />
+                  </radialGradient>
+                  <filter id="dot-glow">
+                    <feGaussianBlur stdDeviation="2" />
+                  </filter>
+                  <symbol id="crew" viewBox="0 0 32 40">
+                    <ellipse
+                      cx="16"
+                      cy="37"
+                      rx="13"
+                      ry="2.5"
+                      fill="#000"
+                      opacity=".4"
+                    />
+                    <rect
+                      x="1"
+                      y="13"
+                      width="9"
+                      height="18"
+                      rx="4"
+                      fill="currentColor"
+                      stroke="#0a0e0c"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M7 15Q7 3 19 3q11 0 11 13v18q0 4-5 4h-4l-1-8h-4l-1 8h-4q-4 0-4-4Z"
+                      fill="currentColor"
+                      stroke="#0a0e0c"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M13 9q5-3 13 0l1 8q-7 4-15 0Z"
+                      fill="#b5d3d4"
+                      stroke="#0a0e0c"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M16 10h7"
+                      stroke="#e5f7ef"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                    />
+                  </symbol>
+                </defs>
+                <rect width="620" height="410" fill="url(#grid)" />
+                <rect width="620" height="410" fill="url(#map-light)" />
+                <g class="ship-layout" stroke-linejoin="round">
+                  <path
+                    d="M64 113h121V76l45-32h139l45 32v37h127v80h-64v59h46v88H396v-68h-49v87H229v-87h-48v68H62v-88h47v-59H64Z"
+                    fill="#161f1b"
+                    stroke="#415048"
+                    stroke-width="3"
+                  />
+                  <path
+                    d="M190 112h224v81H190ZM109 193h368v59H109ZM229 252h118v107M181 252v-59M396 252v-59"
+                    fill="none"
+                    stroke="#35433b"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M193 114V78l41-27h131l42 27v36"
+                    fill="url(#floor)"
+                    stroke="#526057"
+                    stroke-width="1"
+                  />
+                  <g fill="#1e2b24" stroke="#3d4a42">
+                    <ellipse cx="299" cy="112" rx="31" ry="17" />
+                    <ellipse cx="299" cy="112" rx="22" ry="11" />
+                    <rect x="73" y="131" width="40" height="30" rx="4" />
+                    <rect x="125" y="131" width="38" height="30" rx="4" />
+                    <rect x="450" y="127" width="69" height="21" rx="3" />
+                    <rect x="450" y="158" width="69" height="15" rx="3" />
+                    <rect x="76" y="276" width="27" height="48" rx="3" />
+                    <rect x="123" y="276" width="38" height="48" rx="3" />
+                    <rect x="414" y="278" width="90" height="40" rx="3" />
+                    <rect x="247" y="301" width="24" height="43" rx="3" />
+                    <rect x="306" y="301" width="24" height="43" rx="3" />
+                  </g>
+                  <g
+                    fill="#607469"
+                    font-family="monospace"
+                    font-size="8"
+                    letter-spacing="2"
+                    stroke="none"
+                  >
+                    <text x="264" y="80">CAFETERIA</text>
+                    <text x="85" y="181">MEDBAY</text>
+                    <text x="452" y="186">WEAPONS</text>
+                    <text x="78" y="333">ELECTRICAL</text>
+                    <text x="429" y="334">NAVIGATION</text>
+                    <text x="265" y="290">STORAGE</text>
+                  </g>
+                </g>
+                <g id="tracer-layer">
+                  <circle
+                    id="tracer-radius"
+                    cx="299"
+                    cy="222"
+                    r="154"
+                    fill="#c4f66d"
+                    fill-opacity=".025"
+                    stroke="#c4f66d"
+                    stroke-opacity=".28"
+                    stroke-dasharray="4 6"
+                  />
+                  <g stroke-width="1" opacity=".65">
+                    <path
+                      class="tracer-line"
+                      data-distance="141"
+                      d="M299 222 181 148"
+                      stroke="#e47f71"
+                    />
+                    <path
+                      class="tracer-line"
+                      data-distance="107"
+                      d="M299 222 351 129"
+                      stroke="#c4f66d"
+                    />
+                    <path
+                      class="tracer-line"
+                      data-distance="150"
+                      d="M299 222 438 266"
+                      stroke="#8da7ed"
+                    />
+                    <path
+                      class="tracer-line"
+                      data-distance="109"
+                      d="M299 222 224 301"
+                      stroke="#e4c66e"
+                    />
+                  </g>
+                </g>
+                <g class="player">
+                  <use
+                    href="#crew"
+                    x="164"
+                    y="128"
+                    width="31"
+                    height="39"
+                    color="#d06c61"
+                  />
+                  <g class="role-tag">
+                    <rect
+                      x="143"
+                      y="105"
+                      width="73"
+                      height="19"
+                      rx="4"
+                      fill="#352321"
+                      stroke="#71423b"
+                    />
+                    <text
+                      class="role-text"
+                      data-role="IMPOSTOR"
+                      x="179.5"
+                      y="118"
+                      fill="#f19285"
+                    >
+                      IMPOSTOR
+                    </text>
+                  </g>
+                </g>
+                <g class="player">
+                  <use
+                    href="#crew"
+                    x="335"
+                    y="109"
+                    width="31"
+                    height="39"
+                    color="#a9c68c"
+                  />
+                  <g class="role-tag">
+                    <rect
+                      x="313"
+                      y="86"
+                      width="75"
+                      height="19"
+                      rx="4"
+                      fill="#253121"
+                      stroke="#42563a"
+                    />
+                    <text
+                      class="role-text"
+                      data-role="CREWMATE"
+                      x="350.5"
+                      y="99"
+                      fill="#bcda99"
+                    >
+                      CREWMATE
+                    </text>
+                  </g>
+                </g>
+                <g class="player">
+                  <use
+                    href="#crew"
+                    x="422"
+                    y="246"
+                    width="31"
+                    height="39"
+                    color="#859cda"
+                  />
+                  <g class="role-tag">
+                    <rect
+                      x="400"
+                      y="223"
+                      width="75"
+                      height="19"
+                      rx="4"
+                      fill="#222a39"
+                      stroke="#414f6a"
+                    />
+                    <text
+                      class="role-text"
+                      data-role="CREWMATE"
+                      x="437.5"
+                      y="236"
+                      fill="#a1b9f0"
+                    >
+                      CREWMATE
+                    </text>
+                  </g>
+                </g>
+                <g class="player">
+                  <use
+                    href="#crew"
+                    x="208"
+                    y="281"
+                    width="31"
+                    height="39"
+                    color="#d4b958"
+                  />
+                  <g class="role-tag">
+                    <rect
+                      x="186"
+                      y="258"
+                      width="75"
+                      height="19"
+                      rx="4"
+                      fill="#342f20"
+                      stroke="#655734"
+                    />
+                    <text
+                      class="role-text"
+                      data-role="CREWMATE"
+                      x="223.5"
+                      y="271"
+                      fill="#e5cd80"
+                    >
+                      CREWMATE
+                    </text>
+                  </g>
+                </g>
+                <circle cx="299" cy="223" r="23" fill="#c4f66d" opacity=".1" />
+                <use
+                  href="#crew"
+                  x="283"
+                  y="202"
+                  width="31"
+                  height="39"
+                  color="#c4f66d"
+                />
+                <text
+                  x="299"
+                  y="257"
+                  fill="#c4f66d"
+                  font-size="8"
+                  text-anchor="middle"
+                  letter-spacing="1.5"
+                >
+                  YOU
+                </text>
+              </svg>
+              <div id="radar" class="radar" aria-label="Player radar">
+                <div class="radar-cross"></div>
+                <div class="radar-sweep"></div>
+                <i class="radar-dot center"></i><i class="radar-dot red"></i
+                ><i class="radar-dot blue"></i><i class="radar-dot yellow"></i
+                ><i class="radar-dot green"></i><span>RADAR</span>
+              </div>
+              <div class="map-bottom">
+                <span><i class="status-dot"></i> ORBIT OVERLAY</span
+                ><span>ILLUSTRATIVE DEMO</span>
+              </div>
+            </div>
+            <div
+              class="demo-controls"
+              aria-label="Interactive preview controls"
+            >
+              <div class="toggle-controls">
+                <button
+                  class="toggle"
+                  type="button"
+                  data-feature="roles"
+                  aria-pressed="true"
+                >
+                  Role reveal <span class="switch"></span></button
+                ><button
+                  class="toggle"
+                  type="button"
+                  data-feature="tags"
+                  aria-pressed="true"
+                >
+                  Role tags <span class="switch"></span></button
+                ><button
+                  class="toggle"
+                  type="button"
+                  data-feature="tracers"
+                  aria-pressed="true"
+                >
+                  Tracers <span class="switch"></span></button
+                ><button
+                  class="toggle"
+                  type="button"
+                  data-feature="radar"
+                  aria-pressed="true"
+                >
+                  Radar <span class="switch"></span>
+                </button>
+              </div>
+              <label class="radius-control" for="radius"
+                >Tracer radius
+                <input
+                  id="radius"
+                  type="range"
+                  min="60"
+                  max="220"
+                  value="154"
+                /><output id="radius-value" for="radius">154 m</output></label
+              >
+            </div>
+          </div>
+          <div class="demo-caption">
+            <span class="caption-cross" aria-hidden="true">+</span> A little
+            less guessing. A lot more perspective.<span>01 / ORBIT</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="feature-rail wrap" aria-label="Orbit features">
+        <span>BUILT TO SEE MORE</span><span><i>01</i> Role reveal</span
+        ><span><i>02</i> In-game tags</span
+        ><span><i>03</i> Adjustable tracers</span
+        ><span><i>04</i> Player radar</span>
+      </div>
+
+      <section
+        id="features"
+        class="features-section wrap section-space"
+        aria-labelledby="features-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">01 / THE TOOLKIT</p>
+            <h2 id="features-title">
+              A whole new<br />point of <span class="serif-word">view.</span>
+            </h2>
+          </div>
+          <p>
+            More context. More control.<br />Everything you need to see the
+            lobby<br />from a different angle.
+          </p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card role-card">
+            <div class="card-top">
+              <span class="card-number">01</span
+              ><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </div>
+            <h3>No more mystery roles.</h3>
+            <p>
+              See everyone’s role in the lobby. Get the full picture, all in one
+              place.
+            </p>
+            <div class="role-list" aria-hidden="true">
+              <div>
+                <span class="player-pip pip-red"></span>Red
+                <span class="role-pill impostor">Impostor</span>
+              </div>
+              <div>
+                <span class="player-pip pip-lime"></span>Lime
+                <span class="role-pill">Crewmate</span>
+              </div>
+              <div>
+                <span class="player-pip pip-blue"></span>Blue
+                <span class="role-pill">Crewmate</span>
+              </div>
+            </div>
+          </article>
+          <article class="feature-card tag-card">
+            <div class="card-top">
+              <span class="card-number">02</span
+              ><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 5h12l7 7-10 10-9-9Z" />
+                <circle cx="8" cy="10" r="1" />
+              </svg>
+            </div>
+            <h3>Right above their heads.</h3>
+            <p>
+              Keep roles in sight with clear in-game tags that follow each
+              player.
+            </p>
+            <div class="tag-illustration" aria-hidden="true">
+              <span class="illustration-label">CREWMATE</span
+              ><svg viewBox="0 0 80 90">
+                <path
+                  d="M15 37h13v37H15q-7 0-7-9V46q0-9 7-9Z"
+                  fill="#688354"
+                  stroke="#101a0e"
+                  stroke-width="3"
+                />
+                <path
+                  d="M24 36q0-23 25-23t25 24v43q0 6-6 6H56l-2-17H43l-2 17H29q-5 0-5-6Z"
+                  fill="#accb8c"
+                  stroke="#101a0e"
+                  stroke-width="3"
+                />
+                <rect
+                  x="36"
+                  y="28"
+                  width="37"
+                  height="23"
+                  rx="10"
+                  fill="#bad2cc"
+                  stroke="#101a0e"
+                  stroke-width="4"
+                />
+                <path
+                  d="M44 33h17"
+                  stroke="#eff8f1"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                /></svg
+              ><span class="tag-line"></span>
+            </div>
+          </article>
+          <article class="feature-card tracer-card">
+            <div class="card-top">
+              <span class="card-number">03</span
+              ><svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="8" />
+                <circle cx="12" cy="12" r="2" />
+                <path d="M12 1v5m0 12v5M1 12h5m12 0h5" />
+              </svg>
+            </div>
+            <h3>Find your radius.</h3>
+            <p>
+              Trace players around you and adjust the radius to keep your view
+              just how you like it.
+            </p>
+            <div class="tracer-illustration" aria-hidden="true">
+              <div class="trace-circle"></div>
+              <span class="trace-origin"></span
+              ><span class="trace-line one"></span
+              ><span class="trace-line two"></span
+              ><span class="trace-end one"></span
+              ><span class="trace-end two"></span
+              ><span class="trace-distance">YOUR RADIUS. YOUR VIEW.</span>
+            </div>
+          </article>
+          <article class="feature-card radar-card">
+            <div class="card-top">
+              <span class="card-number">04</span
+              ><svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" />
+                <circle cx="12" cy="12" r="5" />
+                <path d="m12 12 7-7" />
+                <circle cx="12" cy="12" r="1" />
+              </svg>
+            </div>
+            <h3>The crew, at a glance.</h3>
+            <p>
+              Keep track of everyone with a compact radar that turns players
+              into easy-to-read dots.
+            </p>
+            <div class="mini-radar" aria-hidden="true">
+              <div class="mini-radar-ring"></div>
+              <i class="rdot rdot-one"></i><i class="rdot rdot-two"></i
+              ><i class="rdot rdot-three"></i><i class="rdot rdot-four"></i
+              ><span>LOBBY IN SIGHT</span>
+            </div>
+          </article>
+        </div>
+        <a class="text-link feature-demo-link" href="#demo"
+          >Take the interactive preview for a spin
+          <span aria-hidden="true">↗</span></a
+        >
+      </section>
+
+      <section
+        id="how-it-works"
+        class="steps-section section-space"
+        aria-labelledby="steps-title"
+      >
+        <div class="wrap">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">02 / LIFT OFF</p>
+              <h2 id="steps-title">
+                Less setup.<br />More <span class="serif-word">play.</span>
+              </h2>
+            </div>
+            <p>
+              Three steps. That’s the whole process.<br />Getting a new
+              perspective is simple.
+            </p>
+          </div>
+          <div class="steps">
+            <article>
+              <span class="step-number"
+                >01 <span aria-hidden="true">↗</span></span
+              >
+              <h3>Open Orbit.</h3>
+              <p>
+                Launch the software and get ready<br />for a different view of
+                the game.
+              </p>
+            </article>
+            <article>
+              <span class="step-number"
+                >02 <span aria-hidden="true">↗</span></span
+              >
+              <h3>Open Among Us.</h3>
+              <p>
+                Start Among Us as you normally would.<br />Keep Orbit open
+                alongside it.
+              </p>
+            </article>
+            <article>
+              <span class="step-number"
+                >03 <span aria-hidden="true">✳</span></span
+              >
+              <h3>Press connect.</h3>
+              <p>
+                Hit Connect in the Orbit menu.<br />Your new perspective starts
+                here.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="faq"
+        class="faq-section wrap section-space"
+        aria-labelledby="faq-title"
+      >
+        <div>
+          <p class="eyebrow">03 / GOOD TO KNOW</p>
+          <h2 id="faq-title">
+            A few things<br />in <span class="serif-word">orbit.</span>
+          </h2>
+          <p class="faq-intro">The details, before you connect.</p>
+        </div>
+        <div class="faq-list">
+          <details open>
+            <summary>What is Orbit?<span aria-hidden="true">+</span></summary>
+            <p>
+              Orbit is companion software for Among Us that adds role
+              visibility, role tags above players, adjustable player tracers,
+              and a player radar.
+            </p>
+          </details>
+          <details>
+            <summary>
+              What are the pricing options?<span aria-hidden="true">+</span>
+            </summary>
+            <p>
+              Orbit access costs $3 per 14 days, or $20 for lifetime access.
+            </p>
+          </details>
+          <details>
+            <summary>
+              How do I buy access?<span aria-hidden="true">+</span>
+            </summary>
+            <p id="purchase-faq">
+              Purchases are not available on this site yet. Once checkout is
+              available, use Buy access to review pricing and purchase terms.
+            </p>
+          </details>
+          <details>
+            <summary>
+              How do I connect it to Among Us?<span aria-hidden="true">+</span>
+            </summary>
+            <p>
+              Open Orbit, launch Among Us, then press Connect in the Orbit menu.
+              That’s the setup flow.
+            </p>
+          </details>
+          <details>
+            <summary>
+              Can I adjust the tracers?<span aria-hidden="true">+</span>
+            </summary>
+            <p>
+              Yes. Orbit includes an adjustable tracer radius so you can choose
+              the area around you. Try the radius slider in the interactive
+              preview above.
+            </p>
+          </details>
+          <details>
+            <summary>
+              Is the preview the actual software?<span aria-hidden="true"
+                >+</span
+              >
+            </summary>
+            <p>
+              The website preview is an interactive illustration of the
+              features. It does not connect to Among Us, and the final software
+              interface may look different.
+            </p>
+          </details>
+          <details>
+            <summary>
+              Is Orbit made by the Among Us developers?<span aria-hidden="true"
+                >+</span
+              >
+            </summary>
+            <p>
+              No. Orbit is an independent project and is not affiliated with or
+              endorsed by Innersloth. Among Us belongs to its respective owners.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section
+        id="access"
+        class="access-section wrap"
+        aria-labelledby="access-title"
+      >
+        <div class="access-orbit" aria-hidden="true">
+          <span></span><span></span><i></i>
+        </div>
+        <div class="access-layout">
+          <div class="access-copy">
+            <p class="eyebrow">
+              <span class="status-dot"></span> YOUR NEXT PERSPECTIVE
+            </p>
+            <h2 id="access-title">
+              Welcome to<br />your <span class="serif-word">Orbit.</span>
+            </h2>
+            <p>See more of the game you already love.</p>
+            <button type="button" class="button" id="access-button">
+              Buy access <span aria-hidden="true">↗</span>
+            </button>
+            <p class="purchase-note" id="purchase-note">
+              Purchasing will be available here soon.
+            </p>
+          </div>
+          <div class="pricing-options" aria-label="Orbit pricing options">
+            <article class="pricing-plan" aria-labelledby="short-plan-title">
+              <span class="plan-number" aria-hidden="true"
+                >01 / SHORT STAY</span
+              >
+              <h3 id="short-plan-title">14-day access</h3>
+              <p class="plan-price">$3</p>
+              <p class="plan-duration">per 14 days</p>
+            </article>
+            <article
+              class="pricing-plan lifetime-plan"
+              aria-labelledby="lifetime-plan-title"
+            >
+              <span class="plan-number" aria-hidden="true"
+                >02 / LONG ORBIT</span
+              >
+              <h3 id="lifetime-plan-title">Lifetime access</h3>
+              <p class="plan-price">$20</p>
+              <p class="plan-duration">lifetime</p>
+            </article>
+          </div>
+        </div>
+        <span class="access-coordinate" aria-hidden="true"
+          >END OF GUESSWORK.<br />START OF SOMETHING NEW.</span
+        >
+      </section>
+    </main>
+
+    <footer class="site-footer wrap">
+      <div class="footer-top">
+        <a href="#" class="brand" aria-label="Orbit home"
+          ><svg viewBox="0 0 44 44" aria-hidden="true">
+            <circle cx="22" cy="22" r="9" />
+            <ellipse
+              cx="22"
+              cy="22"
+              rx="22"
+              ry="9"
+              transform="rotate(-35 22 22)"
+            />
+            <circle class="satellite" cx="38" cy="10" r="3.5" /></svg
+          ><span>orbit<span class="brand-dot">.</span></span></a
+        ><span>A different way to see the game.</span
+        ><a href="#main">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
+      <div class="footer-bottom">
+        <span
+          >© <span id="copyright-year">2026</span> Orbit. All rights
+          reserved.</span
+        ><span
+          >Independent project. Not affiliated with Innersloth or Among
+          Us.</span
+        >
+      </div>
+    </footer>
+
+    <dialog id="access-dialog" aria-labelledby="dialog-title">
+      <button
+        class="dialog-close"
+        type="button"
+        aria-label="Close purchase information"
+      >
+        ×</button
+      ><span class="dialog-icon" aria-hidden="true">◎</span>
+      <p class="eyebrow">STAY IN ORBIT</p>
+      <h2 id="dialog-title">Almost in <span class="serif-word">view.</span></h2>
+      <p>
+        Choose $3 per 14 days or $20 for lifetime access. Checkout isn’t
+        available on this site yet. Check back here to purchase.
+      </p>
+      <button class="button dialog-done" type="button">
+        Got it <span aria-hidden="true">↗</span>
+      </button>
+    </dialog>
+    <div
+      class="sr-only"
+      id="demo-announcement"
+      role="status"
+      aria-live="polite"
+    ></div>
+  </body>
+</html>
