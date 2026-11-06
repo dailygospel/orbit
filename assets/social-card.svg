@@ -4,35 +4,71 @@
   height="630"
   viewBox="0 0 1200 630"
 >
-  <rect width="1200" height="630" fill="#0b0e0c" />
-  <g fill="none" stroke="#c6f785" stroke-opacity=".16">
-    <circle cx="980" cy="315" r="270" />
-    <circle cx="980" cy="315" r="190" />
-    <circle cx="980" cy="315" r="100" />
+  <defs>
+    <radialGradient id="bg">
+      <stop stop-color="#123c79" />
+      <stop offset="1" stop-color="#040916" />
+    </radialGradient>
+    <linearGradient id="t">
+      <stop stop-color="#9cd8ff" />
+      <stop offset="1" stop-color="#3286ff" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#040916" />
+  <ellipse cx="720" cy="330" rx="650" ry="460" fill="url(#bg)" opacity=".8" />
+  <g fill="none" stroke="#3a88e8" stroke-opacity=".22">
     <ellipse
-      cx="980"
+      cx="600"
       cy="315"
-      rx="360"
-      ry="120"
-      transform="rotate(-35 980 315)"
+      rx="540"
+      ry="180"
+      transform="rotate(-20 600 315)"
+    />
+    <ellipse
+      cx="600"
+      cy="315"
+      rx="610"
+      ry="240"
+      transform="rotate(-20 600 315)"
     />
   </g>
-  <circle cx="1150" cy="161" r="13" fill="#c6f785" />
-  <g fill="#f1f2e9" font-family="Arial,Helvetica,sans-serif">
-    <text x="80" y="105" font-size="45" font-weight="bold">
-      orbit
-      <tspan fill="#c6f785">.</tspan>
+  <circle cx="1060" cy="138" r="7" fill="#67c9ff" />
+  <g font-family="Arial,Helvetica,sans-serif">
+    <text
+      x="80"
+      y="97"
+      fill="#d7edff"
+      font-size="32"
+      letter-spacing="7"
+      font-weight="bold"
+    >
+      ORBIT
     </text>
-    <text x="80" y="280" font-size="100" letter-spacing="-4">See the</text>
-    <text x="80" y="390" font-size="100" letter-spacing="-4">
-      bigger
-      <tspan font-family="Georgia,serif" font-style="italic" fill="#c6f785">
-        picture.
-      </tspan>
+    <text
+      x="80"
+      y="278"
+      fill="#eff5ff"
+      font-size="99"
+      letter-spacing="-5"
+      font-weight="bold"
+    >
+      Your game.
     </text>
-    <text x="85" y="493" fill="#a9b1a5" font-size="24">
-      A new perspective on Among Us.
+    <text
+      x="80"
+      y="386"
+      fill="url(#t)"
+      font-size="99"
+      letter-spacing="-5"
+      font-weight="bold"
+    >
+      A whole new orbit.
+    </text>
+    <text x="84" y="477" fill="#91acd0" font-size="23">
+      Role reveal · Tracers · Radar · NoClip · Lights-out vision
+    </text>
+    <text x="84" y="555" fill="#6a9dd3" font-size="18">
+      $3 / 14 days · $20 lifetime
     </text>
   </g>
-  <path d="M80 552h1040" stroke="#283029" />
 </svg>

@@ -1,15 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="15" fill="#0b0e0c" />
-  <g fill="none" stroke="#c6f785" stroke-width="2.5">
+  <defs>
+    <linearGradient id="b" x2="1" y2="1">
+      <stop stop-color="#18396b" />
+      <stop offset="1" stop-color="#071327" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="url(#b)" />
+  <g fill="none" stroke="#61c9ff" stroke-width="2.3">
     <circle cx="32" cy="32" r="13" />
-    <ellipse cx="32" cy="32" rx="29" ry="12" transform="rotate(-35 32 32)" />
+    <ellipse cx="32" cy="32" rx="28" ry="11" transform="rotate(-36 32 32)" />
   </g>
   <circle
-    cx="53"
+    cx="52"
     cy="17"
-    r="5"
-    fill="#c6f785"
-    stroke="#0b0e0c"
+    r="4"
+    fill="#a6eaff"
+    stroke="#102448"
     stroke-width="2"
   />
 </svg>
